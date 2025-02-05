@@ -56,7 +56,7 @@ if ($bookmark->http_status == 'error') {
   </td>
   <td class="trean-bookmarks-actions">
    <a href="<?php echo Horde::url('edit.php')->add('bookmark', (int)$bookmark->id) ?>"><?php echo Horde::img('edit.png', _("Edit")) ?></a>
-   <form action="<?php echo Horde::url('b/delete') ?>" method="post">
+   <form action="<?php echo Horde::url('delete.php') ?>" method="post">
     <input type="hidden" name="bookmark" value="<?php echo (int)$bookmark->id ?>" />
     <input type="hidden" name="url" value="<?php echo $this->h(Horde::selfUrl(true)) ?>" />
     <input type="image" src="<?php echo Horde_Themes::img('delete.png') ?>" />
